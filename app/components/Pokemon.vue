@@ -7,13 +7,13 @@
         <Image :src="this.image" />
         <Label :text="this.name" class="PokemonName" />
 
-        <ListView class="PokemonTypes" separatorColor="#FFF" for="type in this.types"> <!-- тип покемона --->
+        <ListView class="PokemonTypes" separatorColor="#FFF" for="type in this.types"> <!-- тип покемона -->
           <v-template>
             <Label :text="type.name" :class="type.classname" />
           </v-template>
         </ListView>
 
-        <Label :text="this.description" class="PokemonDescription" textWrap="true" /> <!-- описание покемона --->
+        <Label :text="this.description" class="PokemonDescription" textWrap="true" /> <!-- описание покемона -->
 
         <Button text="Back" @tap="goBack" />
 
@@ -28,7 +28,7 @@
     props: ['id', 'name', 'image', 'description', 'types'],  // входные параметры
 
     methods: {
-      goBack: function (args) {
+      goBack: function (args) { // вернуться обратно
         this.$navigateBack();
       }
     }
